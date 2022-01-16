@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { calculatePercentage, calculateTimeAgo } from '../../utils/functions';
 import Action from '../action/action';
-import './card.css';
 import ThumbUp from '../../assets/img/thumbs-up.svg'
 import ThumbDown from '../../assets/img/thumbs-down.svg'
+import './card-flexbox.css';
 
 const MAX_NUMBER_CARACTERS_DESC = 80;
 const MAX_NUMBER_CARACTERS_TITLE = 25;
 
-export default function Card({ personaje, view, modifyStorage }) {
+export default function CardFlexbox({ personaje, view, modifyStorage }) {
     const [percentages, setPercentages] = useState(0)
     const [selectVote, setSelectVote] = useState('')
     const [voteComplete, setVoteComplete] = useState(false)

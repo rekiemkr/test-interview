@@ -50,10 +50,10 @@ function App() {
     <section className="App">
       <Navigation />
       <Header />
-      <div class="max-centered">
-        <Cards info={info} modifyStorage={modifyStorage} />
+      <div className="max-centered">
+        <Cards info={info} modifyStorage={modifyStorage} /> 
         <BannerAdd />
-        <hr class="separator" />
+        <hr className="separator" />
         <Footer />
       </div>
     </section>
