@@ -47,7 +47,7 @@ export default function Card({ personaje, view, modifyStorage }) {
                             <Action clickable={true} type='up' getVote={getVote} selectVote={selectVote} />
                             <Action clickable={true} type='down' getVote={getVote} selectVote={selectVote} />
                             <section>
-                                <button disabled={selectVote === '' && true} className='card__action--vote'  onClick={() => confirmVote(false)}>
+                                <button disabled={selectVote === '' && true} className='card__action--vote' onClick={() => confirmVote(false)}>
                                     Vote Now
                                 </button>
                             </section>
@@ -63,7 +63,8 @@ export default function Card({ personaje, view, modifyStorage }) {
                     }
                 </section>
                 <section className='card__bar'>
-                    <section className='card__bard--positive' style={{ width: `${percentages.positive}%` }}></section>
+                    <section className='card__bar--positive' style={{ width: `${percentages.positive}%` }}></section>
+                    <section className='card__bar--negative' style={{ right: `0.1`, width: `${percentages.negative}%` }}></section>
                     <section className='card__bar--numbers'>
                         <span>
                             <img src={ThumbUp} alt="Vote positive" />
