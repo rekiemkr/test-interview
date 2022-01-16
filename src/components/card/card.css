@@ -81,6 +81,12 @@
     cursor: pointer;
 }
 
+.card__action--vote:disabled,
+.card__action--vote[disabled] {
+    cursor: not-allowed;
+    background-color: var(--color-dark-gray);
+}
+
 .card__background {
     position: absolute;
     top: 0;
@@ -123,6 +129,7 @@
     width: 50%;
     transition: width .5s ease-in-out;
 }
+
 .card__info--description {
     font-size: 1.3rem;
 }
@@ -138,7 +145,8 @@
     display: flex;
     align-items: flex-start;
     margin-top: 0;
-    min-height: 40px;
+    min-height: 46px;
+    max-height: 46px;
 }
 
 .card-list .card__background {
@@ -146,8 +154,8 @@
     top: 0;
     left: 0;
     z-index: 0;
-    width: 180px;
-    height: 160px;
+    width: 185px;
+    height: 185px;
 }
 
 .card-list .card__info--time {
@@ -158,14 +166,6 @@
     margin-left: 11%;
     margin-top: 20px;
 }
-
-.card-list .card-body {
-    position: relative;
-    z-index: 1;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 15.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%);
-    min-height: 180px;
-}
-
 
 
 .card-list .card-main {
@@ -184,7 +184,8 @@
     transform: scale(1.3);
     justify-content: center;
 }
-.card-list .card__action  > *{
+
+.card-list .card__action>* {
     margin-right: 10px;
 }
 
@@ -220,21 +221,31 @@
 
 @media all and (min-width: 700px) {
     .card-list .card__header--title {
-        margin-left: 15%;
+        margin-left: 16%;
         margin-top: 20px;
-        
+
     }
 
     .card-list .card__info {
         margin-left: 7%;
         margin-top: 20px;
     }
+
     .card__header--title {
         margin: 0;
     }
+
     .card__bar--numbers label {
         color: var(--color-white);
         font-size: 1.4rem;
+    }
+
+    .card-list .card-body {
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 19.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%);
+        min-height: 186px;
+        max-height: 186px;
     }
 }
 
@@ -251,17 +262,26 @@
         margin-top: 0;
     }
 
-    
+
     .card-list .card__info .card__info--description {
         font-size: 1.0rem;
         font-weight: 300;
-        margin: .5rem 0;
+        margin: 0 0 .5rem 0;
     }
+
     .card__bar--numbers label {
         font-size: 1.1rem;
     }
 
     .card__info--description {
         font-size: .9rem;
+    }
+
+    .card-list .card-body {
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 15.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%);
+        min-height: 186px;
+        max-height: 186px;
     }
 }

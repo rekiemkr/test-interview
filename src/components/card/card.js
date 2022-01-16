@@ -47,7 +47,7 @@ export default function Card({ personaje, view, modifyStorage }) {
                             <Action clickable={true} type='up' getVote={getVote} selectVote={selectVote} />
                             <Action clickable={true} type='down' getVote={getVote} selectVote={selectVote} />
                             <section>
-                                <button className='card__action--vote' onClick={() => confirmVote(false)}>
+                                <button disabled={selectVote === '' && true} className='card__action--vote'  onClick={() => confirmVote(false)}>
                                     Vote Now
                                 </button>
                             </section>
