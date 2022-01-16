@@ -64,7 +64,7 @@ export default function Card({ personaje, view, modifyStorage }) {
                 </section>
                 <section className='card__bar'>
                     <section className='card__bar--positive' style={{ width: `${percentages.positive}%` }}></section>
-                    <section className='card__bar--negative' style={{ right: `0.1`, width: `${percentages.negative}%` }}></section>
+                    <section className='card__bar--negative' style={{ right: `0`, width: `${percentages.negative}%` }}></section>
                     <section className='card__bar--numbers'>
                         <span>
                             <img src={ThumbUp} alt="Vote positive" />
