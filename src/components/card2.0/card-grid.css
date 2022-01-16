@@ -1,0 +1,245 @@
+.card-grid {
+    min-height: 300px;
+    max-height: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    position: relative;
+    margin: .5rem;
+}
+
+.card-grid__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card-grid-body {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40px 80px 40px 110px 30px;
+    grid-template-rows: 100px 65px 45px 50px 40px;
+    grid-template-areas:
+        "icon title title title ."
+        ". description description description ."
+        ". . time time time"
+        ". action action vote-now ."
+        "gauge-bar gauge-bar gauge-bar gauge-bar gauge-bar";
+    min-height: 300px;
+    max-height: 300px;
+    position: relative;
+    z-index: 1;
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, .05), rgba(0, 0, 0, .6));
+    bottom: calc(100% - 40px);
+    overflow: hidden;
+}
+
+.card-grid__header--icon {
+    grid-area: icon;
+    align-self: end;
+}
+
+.card-grid__header--title {
+    grid-area: title;
+    align-self: end;
+    padding-left: 10px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--color-white);
+    margin: .5rem 0 0;
+    padding: 0;
+}
+
+.card-grid__info--description {
+    grid-area: description;
+    font-size: 1.2rem;
+    margin: .5rem 0 0;
+}
+
+.card-grid__info--time {
+    grid-area: time;
+    align-self: center;
+    font-size: 1rem;
+}
+
+.card-grid__action {
+    grid-area: action;
+    margin: 0;
+}
+
+
+.card-grid__action--vote {
+    grid-area: vote-now;
+}
+
+.card-grid__bar {
+    grid-area: gauge-bar;
+}
+
+.card-grid__info--description, .card-grid__info--time {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white);
+}
+
+.card-grid-list {
+    width: 100%;
+    max-height: 186px;
+    min-height: 186px;
+    position: relative;
+    margin: 0 0 1rem;
+}
+
+.card-grid-list .card-grid-body {
+    grid-template-columns: 1fr 2fr 8fr 3fr 4fr;
+    grid-template-rows: 70px 78px 40px;
+    grid-template-areas:
+        "icon . title . time"
+        ". . description action vote-now"
+        "gauge-bar gauge-bar gauge-bar gauge-bar gauge-bar";
+    max-height: 186px;
+    min-height: 186px;
+}
+
+.card-grid-list .card-grid__header--icon,
+.card-grid-list .card-grid__header--title {
+    align-self: flex-start;
+}
+
+.card-grid-list .card-grid__info--time {
+    align-self: center;
+}
+
+.card-grid__action {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.card__bar {
+    position: relative;
+    height: 40px;
+}
+
+.card-grid__bar--positive {
+    position: absolute;
+    height: 40px;
+    background-color: white;
+    background-color: rgba(var(--color-green-positive), .6);
+    transition: width .5s ease-in-out;
+}
+
+.card-grid__bar--negative {
+    position: absolute;
+    height: 40px;
+    background-color: white;
+    background-color: rgba(var(--color-yellow-negative), .6);
+    transition: width .5s ease-in-out;
+}
+
+.card-grid__bar--numbers {
+    display: flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-grid__bar--numbers label {
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+.card-grid__bar--numbers img {
+    padding: 0 .5rem;
+}
+
+.card-grid__action--vote {
+    box-sizing: border-box;
+    max-width: 110px;
+    min-width: 110px;
+    height: 40px;
+    background-color: var(--color-darker-background);
+    border: 1px var(--color-white) solid;
+    color: var(--color-white);
+    padding: 0 .5rem;
+    cursor: pointer;
+}
+
+.card-grid__action--vote:disabled,
+.card-grid__action--vote[disabled] {
+    cursor: not-allowed;
+    background-color: var(--color-dark-gray);
+}
+
+.card-grid-list .card-grid__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 185px;
+    height: 185px;
+}
+
+.card-grid__header--hidden{
+    display: none;
+}
+
+.card-grid__header--show{
+    display: inline;
+}
+
+@media all and (min-width: 700px) {
+    .card-grid__info--description {
+        font-size: 1.1rem;
+    }
+    .card-grid-list .card-grid-body {
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.0001) 0%, #888888 15.79%, #666666 50%, rgba(51, 51, 51, 0.6) 71.88%);
+        min-height: 186px;
+        max-height: 186px;
+    }
+    .card-grid-list .card-grid__action > * {
+        min-height: 50px;
+        min-width: 50px;
+    }
+    .card-grid-list  .card-grid__action--vote {
+        min-width: 150px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .card-grid__header--title {
+        font-size: 1.2rem;
+    }
+
+    .card-grid__info--description {
+        font-size: .9rem;
+    }
+
+    .card-grid__info--time {
+        font-size: .8rem;
+    }
+    .card-grid__bar--numbers label {
+        font-size: 1.2rem;
+    }
+
+    .card-grid-list .card-grid__header--title {
+        font-size: 1.3rem;
+    }
+
+    .card-grid-list .card-grid__info--description {
+        font-size: 1.1rem;
+    }
+
+    .card-grid-list .card-grid__info--time {
+        font-size: .9rem;
+    }
+    
+}

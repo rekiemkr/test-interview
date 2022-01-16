@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Card from '../components/card/card';
+import CardGrid from '../components/card2.0/card-grid';
 import Dropdown from '../components/dropdown/dropdown';
 import sizes from '../constants/sizes';
 import './cards.css'
@@ -31,7 +31,7 @@ function Cards({ info, modifyStorage }) {
             <section style={{ flexDirection: view === 'list' ? 'column' : 'row' }} className='cards__content'>
                 {
                     info.map((personaje, key) => (
-                        <Card modifyStorage={modifyStorage} personaje={personaje} key={key} view={view} />
+                        <CardGrid modifyStorage={modifyStorage} personaje={personaje} key={key} view={view} />
                     ))
                 }
             </section>
