@@ -243,6 +243,7 @@
     .card-list .card__info {
         margin-left: 7%;
         margin-top: 20px;
+        padding-right: 30px;
     }
 
     .card__header--title {
