@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { calculatePercentage } from '../../utils/functions';
+import { calculatePercentage, calculateTimeAgo } from '../../utils/functions';
 import Action from '../action/action';
 import './card.css';
 import ThumbUp from '../../assets/img/thumbs-up.svg'
@@ -12,8 +12,10 @@ export default function Card({ personaje, view, modifyStorage }) {
     const [percentages, setPercentages] = useState(0)
     const [selectVote, setSelectVote] = useState('')
     const [voteComplete, setVoteComplete] = useState(false)
+    const [timeAgo, setTimeAgo] = useState('');
     useEffect(() => {
-        setPercentages(calculatePercentage(personaje.votes));
+        setPercentages(calculatePercentage(personaje.votes))
+        setTimeAgo(calculateTimeAgo(personaje.lastUpdated))
     }, [personaje, modifyStorage])
 
     const getVote = (type) => {
@@ -37,7 +39,7 @@ export default function Card({ personaje, view, modifyStorage }) {
                 <section className='card-main'>
                     <section className='card__info'>
                         <p className='card__info--description'>{(personaje.description.length > MAX_NUMBER_CARACTERS_DESC) ? `${personaje.description.substring(0, MAX_NUMBER_CARACTERS_DESC)}...` : personaje.description}</p>
-                        <small className='card__info--time'> { !voteComplete ? `1 month ago in ${personaje.category}` : `Thank you for your vote!` } </small>
+                        <small className='card__info--time'> {!voteComplete ? `${timeAgo} in ${personaje.category}` : `Thank you for your vote!`} </small>
                     </section>
                     {
                         !voteComplete &&

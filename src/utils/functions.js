@@ -1,3 +1,5 @@
+import { formatDistance } from "date-fns";
+
 export function calculatePercentage(votes) {
     const total = votes.positive + votes.negative;
     const percentages = {
@@ -5,4 +7,8 @@ export function calculatePercentage(votes) {
         negative: total && +((votes.negative / total) * 100).toFixed(2),
     }
     return percentages
+}
+
+export function calculateTimeAgo(date) {
+    return formatDistance(new Date(date), new Date());
 }
