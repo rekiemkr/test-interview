@@ -1,0 +1,42 @@
+.cards-header__title {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.cards-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.cards__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+}
+
+.cards-header__menu {
+    display: none;
+}
+
+@media all and (min-width: 750px) {
+    .cards {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .cards-header__menu {
+        display: inline;
+    }
+
+    .cards__content {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
