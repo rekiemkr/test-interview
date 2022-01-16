@@ -53,7 +53,7 @@ function App() {
       <div class="max-centered">
         <Cards info={info} modifyStorage={modifyStorage} />
         <BannerAdd />
-        <hr role="separator" />
+        <hr class="separator" />
         <Footer />
       </div>
     </section>

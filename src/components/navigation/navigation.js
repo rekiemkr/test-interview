@@ -14,13 +14,13 @@ export default function navigation() {
                 </button>
                 <ul class="nav__links">
                     <li>
-                        <a href="#">Past Trials</a>
+                        <a href="https://www.zemoga.com/" target="_blank" rel='noreferrer'>Past Trials</a>
                     </li>
                     <li>
-                        <a href="#">How It Works</a>
+                        <a href="https://www.zemoga.com/" target="_blank" rel='noreferrer'>How It Works</a>
                     </li>
                     <li>
-                        <a href="#">Login / Sign Up</a>
+                        <a href="https://www.zemoga.com/" target="_blank" rel='noreferrer'>Login / Sign Up</a>
                     </li>
                     <li>
                         <form>

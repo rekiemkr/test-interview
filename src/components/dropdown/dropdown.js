@@ -22,7 +22,8 @@ export default function Dropdown({selectOption}) {
                 <img
                     style={{ transform: deploy ? `rotate(${180}deg)` : `rotate(${0}deg)` }}
                     className='dropdown__selection--icon'
-                    src={Triangle} />
+                    src={Triangle} 
+                    alt='Arrow'/>
             </section>
             {
                 deploy &&
