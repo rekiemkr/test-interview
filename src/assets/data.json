@@ -65,6 +65,50 @@
                 "positive": 0,
                 "negative": 1
             }
+        },
+        {
+            "name": "Jhon Snow",
+            "description": "is the son of Lyanna Stark and Rhaegar Targaryen, the late Prince of Dragonstone.",
+            "category": "fight",
+            "picture": "snow.png",
+            "lastUpdated": "2021-02-26T23:44:50.326Z",
+            "votes": {
+                "positive": 0,
+                "negative": 1
+            }
+        },
+        {
+            "name": "Daenerys Targaryen",
+            "description": " also known as Daenerys Stormborn, and colloquially known as Dany, was the de facto Queen of the Andals and the First Men and the twenty-first ruler of the Seven Kingdoms, the Khaleesi of the Great Grass Sea, and the Queen of Meereen.",
+            "category": "dragons",
+            "picture": "daeneryes.png",
+            "lastUpdated": "2020-01-26T23:44:50.326Z",
+            "votes": {
+                "positive": 0,
+                "negative": 1
+            }
+        },
+        {
+            "name": "Eddard Stark",
+            "description": "also known as Ned Stark, was the head of House Stark, the Lord of Winterfell, Lord Paramount and Warden of the North, and later Hand of the King to King Robert I Baratheon.",
+            "category": "wolf",
+            "picture": "ned-stark.png",
+            "lastUpdated": "2019-01-26T23:44:50.326Z",
+            "votes": {
+                "positive": 0,
+                "negative": 1
+            }
+        },
+        {
+            "name": "Walter white",
+            "description": "also known by his clandestine pseudonym and business moniker Heisenberg, was an American drug kingpin. A former chemist and high school chemistry teacher in Albuquerque, New Mexico, he started manufacturing crystal methamphetamine after being diagnosed with terminal lung cancer. He initially does this in order to pay for his treatments and secure the financial future of his family: wife Skyler, son Walt Jr., and infant daughter Holly, but confesses before his death that he actually did it for himself, due to being good at it and feeling alive.",
+            "category": "drugs",
+            "picture": "walter-white.png",
+            "lastUpdated": "2021-12-26T23:44:50.326Z",
+            "votes": {
+                "positive": 1,
+                "negative": 0
+            }
         }
     ]
 }
