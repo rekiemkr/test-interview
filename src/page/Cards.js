@@ -7,7 +7,9 @@ function Cards({ info, modifyStorage }) {
 
     const [view, setView] = useState('card');
     useEffect(() => {
-        if (window.innerWidth < sizes.MAX_MOBILE) setView('card');
+        window.addEventListener("resize", function () {
+            if (window.innerWidth < sizes.MAX_MOBILE) setView('card');
+        });
     }, [])
     const selectOption = (viewChange) => {
         if (viewChange === 1) setView('list')
