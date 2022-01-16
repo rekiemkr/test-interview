@@ -131,7 +131,7 @@
 }
 
 .card__info--description {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .card-list {
@@ -139,6 +139,10 @@
     width: 100%;
     min-height: 170px;
     position: relative;
+}
+
+.card-list .card__info--description {
+    font-size: 1.2rem;
 }
 
 .card-list .card__header {
