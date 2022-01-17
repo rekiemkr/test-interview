@@ -28,7 +28,7 @@ export default function CardGrid({ personaje, view, saveVote }) {
     }
     return (
         <section className={view === 'list' ? 'card-grid-list' : 'card-grid'}>
-            <img className='card-grid__background' src={require(`../../assets/people/${personaje.picture}`)} alt="example" />
+            <img className='card-grid__background' src={require(`../../assets/people/${personaje.picture}`)} alt={personaje.name} />
             <section className='card-grid-body'>
                 <span className={personaje.votes.positive === personaje.votes.negative ? 'card-grid__header--icon card-grid__header--hidden' : 'card-grid__header--icon card-grid__header--show'}>
                     <Action type={personaje.votes.positive > personaje.votes.negative ? 'up' : 'down'} />
@@ -38,7 +38,7 @@ export default function CardGrid({ personaje, view, saveVote }) {
                 <small className='card-grid__info--time'> {!voteComplete ? `${timeAgo} in ${personaje.category}` : `Thank you for your vote!`} </small>
                 {
                     !voteComplete &&
-                    <section className='card-grid__action'>
+                    <section aria-describedby={personaje.name} className='card-grid__action'>
                         <Action clickable={true} type='up' getVote={getVote} selectVote={selectVote} />
                         <Action clickable={true} type='down' getVote={getVote} selectVote={selectVote} />
                     </section>
@@ -51,12 +51,12 @@ export default function CardGrid({ personaje, view, saveVote }) {
                     <section className='card-grid__bar--negative' style={{ right: `0`, width: `${percentages.negative}%` }}></section>
                     <section className='card-grid__bar--numbers'>
                         <span>
-                            <img src={ThumbUp} alt="Vote positive" />
+                            <img src={ThumbUp} alt="Percentage Votes positive" />
                             <label>{percentages.positive}%</label>
                         </span>
                         <span>
                             <label>{percentages.negative}%</label>
-                            <img src={ThumbDown} alt="Vote negative" />
+                            <img src={ThumbDown} alt="Percentage Votes negative" />
                         </span>
                     </section>
                 </section>

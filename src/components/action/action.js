@@ -12,8 +12,8 @@ export default function Action({ type, getVote, selectVote, clickable }) {
         setStyles(changeStyle)
     }, [type, clickable])
     return (
-        <button className={selectVote === type ? `${styles} action-select` : styles} onClick={() => clickable && getVote(type)}>
-            <img src={type === 'up' ? ThumbUp : ThumbDown} alt='Action' />
+        <button disabled={!clickable} className={selectVote === type ? `${styles} action-select` : styles} onClick={() => clickable && getVote(type)}>
+            <img src={type === 'up' ? ThumbUp : ThumbDown} alt={clickable && type === 'up' ? 'Vote like' : 'Vote dislike'} />
         </button>
     )
 }
