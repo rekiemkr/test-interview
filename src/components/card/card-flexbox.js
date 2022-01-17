@@ -8,7 +8,7 @@ import './card-flexbox.css';
 const MAX_NUMBER_CARACTERS_DESC = 80;
 const MAX_NUMBER_CARACTERS_TITLE = 25;
 
-export default function CardFlexbox({ personaje, view, modifyStorage }) {
+export default function CardFlexbox({ personaje, view, saveVote }) {
     const [percentages, setPercentages] = useState(0)
     const [selectVote, setSelectVote] = useState('')
     const [voteComplete, setVoteComplete] = useState(false)
@@ -16,7 +16,7 @@ export default function CardFlexbox({ personaje, view, modifyStorage }) {
     useEffect(() => {
         setPercentages(calculatePercentage(personaje.votes))
         setTimeAgo(calculateTimeAgo(personaje.lastUpdated))
-    }, [personaje, modifyStorage])
+    }, [personaje, saveVote])
 
     const getVote = (type) => {
         setSelectVote(type);
@@ -24,7 +24,7 @@ export default function CardFlexbox({ personaje, view, modifyStorage }) {
     const confirmVote = (again) => {
         setVoteComplete(!voteComplete);
         setSelectVote('');
-        if (!again) modifyStorage(personaje.name, selectVote === 'up');
+        if (!again) saveVote(personaje.name, selectVote === 'up');
     }
     return (
         <section className={view === 'list' ? 'card-list' : 'card'}>

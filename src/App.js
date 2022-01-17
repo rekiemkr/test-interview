@@ -19,7 +19,7 @@ function App() {
     setInfo(getStore())
   }, [])
 
-  const modifyStorage = ((name, vote) => {
+  const saveVote = ((name, vote) => {
     const copyStore = [...info]
     copyStore.map((item) => {
       if (item.name === name) {
@@ -53,7 +53,7 @@ function App() {
       <Header />
       <div className="max-centered">
         <BannerInfo />
-        <Cards info={info} modifyStorage={modifyStorage} />
+        <Cards info={info} saveVote={saveVote} />
         <BannerAdd />
         <hr className="separator" />
         <Footer />
