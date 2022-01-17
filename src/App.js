@@ -6,6 +6,7 @@ import Footer from "./components/footer/footer";
 import BannerAdd from "./components/banner-add/banner-add";
 import Cards from "./page/cards";
 import jsonData from "./assets/data.json";
+import BannerInfo from "./components/banner-info/banner-info";
 
 function App() {
   const [info, setInfo] = useState([]);
@@ -51,7 +52,8 @@ function App() {
       <Navigation />
       <Header />
       <div className="max-centered">
-        <Cards info={info} modifyStorage={modifyStorage} /> 
+        <BannerInfo />
+        <Cards info={info} modifyStorage={modifyStorage} />
         <BannerAdd />
         <hr className="separator" />
         <Footer />
