@@ -4,7 +4,7 @@ import Header from "./components/header/header";
 import Navigation from "./components/navigation/navigation";
 import Footer from "./components/footer/footer";
 import BannerAdd from "./components/banner-add/banner-add";
-import Cards from "./page/Cards";
+import Cards from "./page/cards";
 import jsonData from "./assets/data.json";
 
 function App() {

@@ -1,3 +1,13 @@
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #FFF;
+}
+
+
 .cards-header__title {
     font-weight: 300;
     font-size: 2rem;
@@ -22,6 +32,7 @@
 .cards-header__menu {
     display: none;
 }
+
 
 @media all and (min-width: 768px) {
 

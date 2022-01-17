@@ -24,7 +24,6 @@ function Cards({ info, modifyStorage }) {
                 {
                     <section className='cards-header__menu'>
                         <Dropdown selectOption={(option) => selectOption(option)} />
-                        {/* <buttos onClick={() => changeViewType('list')}>List</buttos */}
                     </section>
                 }
             </section>
