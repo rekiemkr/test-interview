@@ -109,6 +109,28 @@
                 "positive": 1,
                 "negative": 0
             }
+        },
+        {
+            "name": "SpongeBob SquarePants",
+            "description": "is an American animated comedy television series created by marine science educator and animator Stephen Hillenburg for Nickelodeon. The series chronicles the adventures of the title character and his aquatic friends in the fictional underwater city of Bikini Bottom.",
+            "category": "burguers",
+            "picture": "bob.png",
+            "lastUpdated": "2000-12-26T23:44:50.326Z",
+            "votes": {
+                "positive": 1,
+                "negative": 0
+            }
+        },
+        {
+            "name": "Donald Trump",
+            "description": " is an American politician, media personality, and businessman who served as the 45th president of the United States",
+            "category": "politics",
+            "picture": "donald.png",
+            "lastUpdated": "2018-12-26T23:44:50.326Z",
+            "votes": {
+                "positive": 1,
+                "negative": 0
+            }
         }
     ]
 }
