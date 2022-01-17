@@ -11,7 +11,7 @@ In the project directory, you can run:
 ### Install the dependencies
 
     npm install
-### Create *.env.develoment.local*
+### Create *.env.development.local*
 
     ENV=LOCAL
     REACT_APP_WEBSITE_NAME=Rule of thumb Local
@@ -33,7 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 [https://zemoga-test-ten.vercel.app/](https://zemoga-test-ten.vercel.app/)
 
-### Run unit test
+### Run unit tests
 
     npm test
 
